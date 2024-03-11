@@ -5,7 +5,7 @@
 
 <div class="container">
   <h2>Hi</h2>
-  <p>If you're seeing this, it's probably because you entered a url wrong</p>
+  <p>If you're seeing this, you either typed a url wrong or came from the home page</p>
   <p>Here's a list of all the redirects available:</p>
   {#each links as [redirect, url]}
     <a href={url} target="_blank">
