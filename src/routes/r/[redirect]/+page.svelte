@@ -1,0 +1,1 @@
+<h1>Enable javascript to be redirected</h1>
