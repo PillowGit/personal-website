@@ -1,1 +1,3 @@
-<h1>Enable javascript to be redirected</h1>
+<h1>
+hi
+</h1>

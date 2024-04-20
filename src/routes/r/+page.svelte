@@ -1,8 +1,8 @@
-<script>
-  import redirects from './redirects.json';
-  let links = Object.entries(redirects);
+<script lang="ts">
+  import redirects from '$lib/resources/redirects.json';
+  let links: [string, string][] = Object.entries(redirects);
 </script>
-
+  
 <div class="container">
   <h2>Hi</h2>
   <p>If you're seeing this, you either typed a url wrong or came from the home page</p>
@@ -13,13 +13,13 @@
     </a>
   {/each}
 </div>
-
+  
 <style>
   /* Style general page layout */
   .container {
     /* Format text */
     text-align: left;
-
+  
     /* Center the container slightly */
     margin-left: 10%;
     margin-right: 10%;
@@ -40,3 +40,4 @@
     font-size: 2rem;
   }
 </style>
+  

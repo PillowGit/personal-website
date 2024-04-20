@@ -1,3 +1,5 @@
-<h1>Hi :3</h1>
-<h2>Website not done yet</h2>
-<p><br>visit <a href="/r/">redirects page</a> if that's what you're here for</p>
+<h1>HOME PAGE</h1>
+<p></p>
+<h3>YIPPIE</h3>
+<p></p>
+<h3><a href="/r">Redirects page</a></h3>
