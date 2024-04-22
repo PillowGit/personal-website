@@ -11,7 +11,8 @@ import { redirect } from '@sveltejs/kit';
 export function load({ params }) {
     const url = redirects[params.redirect];
     if (url !== undefined) {
-        throw redirect(302, '/');
+        throw redirect(302, url);
+    } else {
+        throw redirect(302, '/r');
     }
-    return {};
 }
