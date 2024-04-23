@@ -9,7 +9,12 @@ const redirects: Redirects = data;
 import { redirect } from '@sveltejs/kit';
 
 // On page load function
-export function load({ params }) {
+interface LoadParams {
+    params: {
+        redirect: string;
+    }
+}
+export function load({ params }: LoadParams) {
     // Search for url shortlink in json file
     const url = redirects[params.redirect];
     // If found, redirect to that url
