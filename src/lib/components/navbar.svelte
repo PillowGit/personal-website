@@ -1,5 +1,6 @@
 <script lang="ts">
     export let selection: string;
+    export let index: number = -1;
     const choices = {
         0: "about",
         1: "projects",
@@ -11,7 +12,7 @@
     <div class="navbar">
         {#each Object.entries(choices) as [i, choice]}
             <button
-                on:click={() => (selection = choice)}
+                on:click={() => { selection = choice; index = parseInt(i); }}
                 class:active={selection === choice}
                 class="nostylebutton"
             >

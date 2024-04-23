@@ -2,13 +2,17 @@
     import Navbar from "$lib/components/navbar.svelte";
 
     let navbar_choice: string = "";
+    let navbar_index: number = -1;
 </script>
 
-<Navbar bind:selection={navbar_choice}/>
+<Navbar bind:selection={navbar_choice} bind:index={navbar_index}/>
 <div class="page">
     <h1>
         Pillow
     </h1>
+    <p>
+        You picked:<br>{navbar_index+1}. {navbar_choice} 
+    </p>
 </div>
 
 <style>
