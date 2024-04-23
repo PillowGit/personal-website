@@ -1,0 +1,16 @@
+:root {
+    --color1: #252627;
+    --color2: #f2efe9;
+    --color3: #3185fc;
+    --color4: #e84855;
+    --color5: #73956f;
+
+    --bg-color: var(--color1);
+    --main-color: var(--color2);
+    --complement: var(--color1);
+}
+.light-mode {
+    --bg-color: var(--color2);
+    --main-color: var(--color1);
+    --complement: var(--color2);
+}
