@@ -14,3 +14,19 @@
     --main-color: var(--color1);
     --complement: var(--color2);
 }
+
+@font-face {
+    font-family: 'Martian Mono';
+    src: url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        'wght' 400;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    font-family: 'Martian Mono', monospace;
+}
