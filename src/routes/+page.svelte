@@ -1,7 +1,9 @@
 <script lang="ts">
+    import AboutMe from "$lib/components/shelldisplays/aboutme.svelte";
+    import Shell from "$lib/components/shell.svelte";
+
     import PageBg from "$lib/components/pagebg.svelte";
     import Navbar from "$lib/components/navbar.svelte";
-    import Shell from "$lib/components/shell.svelte";
 
     let navbar_choice: string = "";
     let navbar_index: number = -1;
@@ -19,7 +21,7 @@
             About Me:
         </h2>
         <Shell shell_title="/home/pillow/about/">
-            <h2>Hwllo</h2>
+            <AboutMe allow_typing={true}/>
         </Shell>
     </div>
 

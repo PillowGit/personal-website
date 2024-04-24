@@ -28,10 +28,11 @@
         --shell-darker-bg: color-mix(in srgb, var(--main-color) 12.5%, black);
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
 
         margin-left: 5%;
-        min-width: 90%;
+        width: 90%;
         min-height: 20rem;
 
         background-color: var(--shell-darker-bg);
@@ -47,6 +48,7 @@
         border-bottom: 0.2rem solid var(--shell-outlines);
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
+        height: 3.25rem;
         width: 100%;
         background-color: var(--shell-lighter-bg);
     }
