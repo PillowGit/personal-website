@@ -19,14 +19,6 @@
             About Me:
         </h2>
         <Shell shell_title="/home/pillow/about/"/>
-        <Shell shell_title="/home/pillow/about/"/>
-        <Shell shell_title="/home/pillow/about/"/>
-        <Shell shell_title="/home/pillow/about/"/>
-        <Shell shell_title="/home/pillow/about/"/>
-        <Shell shell_title="/home/pillow/about/"/>
-        <Shell shell_title="/home/pillow/about/"/>
-        <Shell shell_title="/home/pillow/about/"/>
-        <Shell shell_title="/home/pillow/about/"/>
     </div>
 
 </div>
