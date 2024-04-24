@@ -22,6 +22,9 @@
 
 <style>
     .shell-container {
+        --shell-outlines: color-mix(in srgb, var(--main-color) 70%, transparent);
+        --shell-lighter-bg: color-mix(in srgb, var(--shell-outlines) 13%, black);
+        --shell-darker-bg: color-mix(in srgb, var(--main-color) 12.5%, black);
         display: flex;
         flex-direction: column;
         align-items: center;
