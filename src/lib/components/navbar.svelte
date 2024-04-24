@@ -159,7 +159,7 @@
         width: 100%;
         background-color: var(--complement);
         position: fixed;
-        top: 0;
+        top: 0.25rem;
         left: -1px;
         z-index: 5;
     }
