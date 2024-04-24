@@ -79,6 +79,7 @@
     })
 </script>
 
+<div class="spacer"></div>
 <div class="navbar-container">
     <!-- Left Nav -->
     <div class="left-nav">
@@ -144,7 +145,9 @@
 </div>
 
 <style>
-
+    .spacer {
+        margin-bottom: 4rem;
+    }
     /* Navar Container */
     .navbar-container {
         display: flex;
@@ -153,7 +156,10 @@
         margin-bottom: 4rem;
         justify-content: center;
 
+        width: 100%;
         background-color: var(--complement);
+        position: fixed;
+        top: 0;
         z-index: 5;
     }
 
