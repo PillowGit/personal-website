@@ -157,6 +157,9 @@
         justify-content: center;
 
         width: 100%;
+        min-height: 5rem;
+        margin-top: -1rem;
+
         background-color: var(--complement);
         position: fixed;
         top: 0.25rem;
