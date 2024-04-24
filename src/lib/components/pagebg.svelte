@@ -71,8 +71,8 @@
     }
     .circles li:nth-child(2){
         left: 10%;
-        width: 20px;
-        height: 20px;
+        width: 60px;
+        height: 60px;
         animation-delay: 2s;
         animation-duration: 12s;
     }
@@ -116,8 +116,8 @@
     }
     .circles li:nth-child(9){
         left: 20%;
-        width: 15px;
-        height: 15px;
+        width: 40px;
+        height: 40px;
         animation-delay: 2s;
         animation-duration: 35s;
     }
