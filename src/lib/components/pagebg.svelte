@@ -45,7 +45,7 @@
     .circles{
         display: flex;
         justify-content: space-between;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 98%;
@@ -65,8 +65,8 @@
     }
     .circles li:nth-child(1){
         left: 25%;
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         animation-delay: 0s;
     }
     .circles li:nth-child(2){
