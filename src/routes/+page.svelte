@@ -18,7 +18,9 @@
         <h2 class="about-me-title">
             About Me:
         </h2>
-        <Shell shell_title="/home/pillow/about/"/>
+        <Shell shell_title="/home/pillow/about/">
+            <h2>Hwllo</h2>
+        </Shell>
     </div>
 
 </div>

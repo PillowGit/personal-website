@@ -18,6 +18,7 @@
             <img src="/icons/x.svg" alt="x" />
         </div>
     </div>
+    <slot />
 </div>
 
 <style>
