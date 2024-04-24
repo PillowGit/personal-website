@@ -162,7 +162,6 @@
         top: 0;
         left: -1px;
         z-index: 5;
-        border: 1px red solid;
     }
 
     /* Main Center Navbar */
