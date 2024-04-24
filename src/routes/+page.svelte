@@ -1,4 +1,5 @@
 <script lang="ts">
+    import PageBg from "$lib/components/pagebg.svelte";
     import Navbar from "$lib/components/navbar.svelte";
     import Shell from "$lib/components/shell.svelte";
 
@@ -6,6 +7,7 @@
     let navbar_index: number = -1;
 </script>
 
+<PageBg />
 <Navbar bind:selection={navbar_choice} bind:index={navbar_index}/>
 <div class="page">
     <h1 class="page-title">
