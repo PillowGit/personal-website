@@ -31,6 +31,7 @@
     }
 
     // Storage for all navbar elements
+    // Site used for icons: https://www.svgrepo.com/collection/zest-interface-icons/1
     const nav_elements: NavElements = {
         left: {
             0: {
