@@ -1,12 +1,13 @@
 <script lang="ts">
+  import PageBg from "$lib/components/pagebg.svelte";
   import redirects from '$lib/resources/redirects.json';
   let links: [string, string][] = Object.entries(redirects);
 </script>
   
+<PageBg />
 <div class="container">
-  <h2>Hi</h2>
-  <p>If you're seeing this, you either typed a url wrong or came from the home page</p>
-  <p>Here's a list of all the redirects available:</p>
+  <a href="/">A link back home, incase you're lost</a>
+  <h1>Here's a list of all redirects available from my site:</h1>
   {#each links as [redirect, url]}
   <div class="redirect">
     <a href={url} target="_blank">
@@ -39,8 +40,12 @@
   .redirect a:hover, .redirect a:active {
     color: color-mix(in srgb, var(--main-color) 50%, transparent);
   }
-  h2, p {
-    font-size: 2rem;
+  h1 {
+    font-size: 3.5rem;
+  }
+  .container>a:link, .container>a:visited {
+    color: var(--main-color);
+    font-size: 1rem;
   }
 </style>
   

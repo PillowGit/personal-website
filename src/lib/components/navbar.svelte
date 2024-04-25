@@ -70,7 +70,7 @@
         main: {
             0: "about",
             1: "projects",
-            2: "code",
+            2: "nothing",
         },
         right: {
             0: {
@@ -174,7 +174,7 @@
 
         width: 100%;
         min-height: 5rem;
-        margin-top: -1rem;
+        margin-top: -0.5rem;
 
         background-color: var(--complement);
         position: fixed;

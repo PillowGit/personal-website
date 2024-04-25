@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-	import type { InlineConfig } from 'vite';
   export let allow_typing: boolean = false;
 
   let input_field: string = "▮"; // cat aboutme.txt
@@ -138,7 +137,7 @@
   onMount(async () => {
     await sleep(1500);
     while (!allow_typing) {
-      await sleep(200);
+      await sleep(2000);
     }
     await typeInputCmd();
     removeShellInput();
