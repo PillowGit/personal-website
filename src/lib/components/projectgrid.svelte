@@ -23,14 +23,14 @@
         },
         {
             title: "Kanban Todo List (CPSC 362)",
-            description: "A kanban style todo list for the CPSC 362 class at CSUF. My First completely fullstack webdev project, built using SvelteKit, firebase, and deployed with Vercel.",
+            description: "A kanban style todo list for the CPSC 362 class at CSUF. My First completely fullstack webdev project, built using SvelteKit, firebase, and deployed with Vercel",
             image: "/images/todolist.png",
             alt: "Todo-List",
             link: "https://362-todo-list.pillo.dev/",
         },
         {
             title: "Fullyhacks Bot",
-            description: "A discord bot created using Discord.js and Node.js to help operations perform smoothly at CSUF's 2024 hackathon, Fullyhacks.",
+            description: "A discord bot created using Discord.js and Node.js to help operations perform smoothly at CSUF's 2024 hackathon, Fullyhacks",
             image: "/images/fullyhacksbot.png",
             alt: "Fullyhacks Discord Bot",
             link: "https://github.com/PillowGit/Fullyhacks-Bot",
