@@ -11,7 +11,7 @@
 
   // Function to type the input command
   async function typeInputCmd() {
-    let input_text = "clear && cat aboutme.md";
+    let input_text = "clear && cat about_me.md";
     let i = 0;
     while (i < input_text.length) {
       input_field = input_text.slice(0, i+1) + "▮";
