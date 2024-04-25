@@ -65,6 +65,45 @@
       colored: null,
       content: "pillo.",
     },
+    {
+      type: "icon",
+      icon: {
+        path: "/icons/mail.svg",
+        alt: "gmail",
+      },
+      colored: null,
+      content: "e.f.escartin@gmail.com",
+    },
+    {
+      type: "colored",
+      icon: null,
+      colored: "Name:",
+      content: "Esteban Escartin"
+    },
+    {
+      type: "colored",
+      icon: null,
+      colored: "Nickname:",
+      content: "Pillow"
+    },
+    {
+      type: "colored",
+      icon: null,
+      colored: "Age/DOB:",
+      content: "April 21, 2003  |  21 yo"
+    },
+    {
+      type: "colored",
+      icon: null,
+      colored: "Skills:",
+      content: "C++, C, JS, HTML, CSS, Python, Rust, Go"
+    },
+    {
+      type: "colored",
+      icon: null,
+      colored: "Title:",
+      content: "Google SWE Intern"
+    },
   ];
   let shown_lines: Line[] = [];
   // debug
@@ -72,19 +111,28 @@
   // debug
   async function displayLines() {
     for (let i = 0; i < lines.length; i++) {
+      // Add entry to shown_lines
       shown_lines.push({
         type: lines[i].type,
         icon: lines[i].icon,
-        colored: lines[i].colored,
+        colored: (lines[i].type === "colored") ? "" : null,
         content: "",
       });
       shown_lines = shown_lines;
+      // If entry has type colored, simulate typing the colored section too
+      if (lines[i].type === "colored" && lines[i].colored !== null) {
+        for (let j = 0; j < lines[i].colored.length; j++) {
+          shown_lines[i].colored += lines[i].colored[j];
+          shown_lines = shown_lines;
+          await sleep(20);
+        }
+      }
       for (let j = 0; j < lines[i].content.length; j++) {
         shown_lines[i].content += lines[i].content[j];
         shown_lines = shown_lines;
         await sleep(20);
       }
-      await sleep(500);
+      await sleep(300);
     }
   }
 
@@ -127,11 +175,34 @@
           {line.content}
         </div>
       </div>
+    {:else if line.type === "colored" && line.colored !== null}
+      <div class="output-colored">
+        <div class="output-colored-text">{line.colored}</div>
+        <div class="output-colored-normal">{line.content}</div>
+      </div>
     {/if}
   {/each}
+  <div class="bottom-spacing"></div>
 </div>
 
 <style>
+  .output-colored {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    width: 92.5%;
+  }
+  .output-colored>div {
+    margin-right: 1rem;
+    align-self: center;
+    font-weight: 600;
+  }
+  .output-colored-text {
+    color: var(--color5);
+  }
+
   .output-icon {
     display: flex;
     align-items: center;
@@ -139,6 +210,7 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     width: 92.5%;
+    font-weight: 700;
   }
   .output-icon>img {
     height: 1.5rem;
@@ -148,7 +220,6 @@
     margin-right: 1rem;
     padding-left: 0.5rem;
   }
-
   .output-title {
     font-size: 2rem;
     font-weight: bold;
@@ -201,5 +272,8 @@
   .input-text {
     width: 100%;
     text-wrap: balance;
+  }
+  .bottom-spacing {
+    height: 1.5rem;
   }
 </style>
