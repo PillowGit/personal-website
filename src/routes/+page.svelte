@@ -23,6 +23,7 @@
 
 </script>
 
+<div class="mobile-message">This site does not support mobile.</div>
 <PageBg />
 <Navbar bind:selection={navbar_choice} bind:index={navbar_index}/>
 <div class="page">
@@ -90,5 +91,29 @@
         opacity: 1;
         visibility: visible;
         transform: none;
+    }
+    .mobile-message {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-color);
+        font-size: 2em;
+        text-align: center;
+        text-wrap: balance;
+        opacity: 0;
+        visibility: hidden;
+    }
+    @media (pointer:none), (pointer:coarse) {
+        .mobile-message {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 </style>
