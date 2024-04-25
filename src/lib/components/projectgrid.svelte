@@ -12,14 +12,14 @@
             description: "An informative, open source template for discord.js projects",
             image: "https://pbs.twimg.com/media/D6hPTEiWAAI9uoz.png",
             alt: "Discord Wumpus",
-            link: "https://github.com/PillowGit/base-discordjs-template",
+            link: "https://github.com/PillowGit/base-discord-js-bot",
         },
         {
             title: "Personal Site/Portfolio",
             description: "My first real frontend project, completed with SvelteKit and deployed with Vercel",
             image: "/images/homepage.png",
             alt: "Site homepage",
-            link: "https://github.com/PillowGit/personal-site",
+            link: "/",
         },
         {
             title: "Kanban Todo List (CPSC 362)",
@@ -41,11 +41,13 @@
 <div class="project-display-box">
     {#each projects as project}
         <div class="project-card">
+            <a href={project.link} target="_blank">
             <img src={project.image} alt={project.alt} />
             <div class="project-card-info">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
             </div>
+            </a>
         </div>
     {/each}
 </div>
