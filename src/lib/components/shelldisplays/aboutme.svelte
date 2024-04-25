@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+	import type { InlineConfig } from 'vite';
   export let allow_typing: boolean = false;
 
   let input_field: string = "▮"; // cat aboutme.txt
@@ -11,12 +12,12 @@
 
   // Function to type the input command
   async function typeInputCmd() {
-    let input_text = "clear && cat aboutme.txt";
+    let input_text = "clear && cat aboutme.md";
     let i = 0;
     while (i < input_text.length) {
       input_field = input_text.slice(0, i+1) + "▮";
       i++;
-      await sleep(150);
+      await sleep(90);
     }
     await sleep(1000);
     input_field = input_text;
@@ -29,13 +30,74 @@
     }
   }
 
+  // Function to type main text lines
+  interface Line {
+    type: string;
+    icon: null | {
+      path: string;
+      alt: string;
+    };
+    colored: null | string;
+    content: string;
+  }
+  const lines: Line[] = [
+    {
+      type: "title",
+      icon: null,
+      colored: null,
+      content: "About Me!"
+    },
+    {
+      type: "icon",
+      icon: {
+        path: "/icons/github.svg",
+        alt: "github"
+      },
+      colored: null,
+      content: "PillowGit",
+    },
+    {
+      type: "icon",
+      icon: {
+        path: "/icons/discord.svg",
+        alt: "discord"
+      },
+      colored: null,
+      content: "pillo.",
+    },
+  ];
+  let shown_lines: Line[] = [];
+  // debug
+  //shown_lines = lines;
+  // debug
+  async function displayLines() {
+    for (let i = 0; i < lines.length; i++) {
+      shown_lines.push({
+        type: lines[i].type,
+        icon: lines[i].icon,
+        colored: lines[i].colored,
+        content: "",
+      });
+      shown_lines = shown_lines;
+      for (let j = 0; j < lines[i].content.length; j++) {
+        shown_lines[i].content += lines[i].content[j];
+        shown_lines = shown_lines;
+        await sleep(20);
+      }
+      await sleep(500);
+    }
+  }
+
+  // On page mount || Controls typing effects
   onMount(async () => {
-    await sleep(3000);
+    await sleep(1500);
     while (!allow_typing) {
       await sleep(200);
     }
     await typeInputCmd();
     removeShellInput();
+    await sleep(50);
+    await displayLines();
   });
 </script>
 
@@ -53,9 +115,49 @@
       </div>
     </div>
   </div>
+  {#each shown_lines as line}
+    {#if line.type === "title"}
+      <div class="output-title">
+        {line.content}
+      </div>
+    {:else if line.type === "icon" && line.icon !== null}
+      <div class="output-icon">
+        <img src={line.icon.path} alt={line.icon.alt} />
+        <div class="output-icon-text">
+          {line.content}
+        </div>
+      </div>
+    {/if}
+  {/each}
 </div>
 
 <style>
+  .output-icon {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 92.5%;
+  }
+  .output-icon>img {
+    height: 1.5rem;
+    aspect-ratio: 1/1;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    margin-right: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  .output-title {
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 95%;
+    border-bottom: solid 0.5px color-mix(in srgb, var(--main-color) 50%, transparent);
+  }
   .content-container {
     display: flex;
     flex-direction: column;
