@@ -16,7 +16,7 @@
     while (i < input_text.length) {
       input_field = input_text.slice(0, i+1) + "▮";
       i++;
-      await sleep(90);
+      await sleep(Math.random() * 90 + 25);
     }
     await sleep(1000);
     input_field = input_text;
@@ -121,7 +121,7 @@
         for (let j = 0; j < colored_text.length; j++) {
           shown_lines[i].colored += colored_text[j];
           shown_lines = shown_lines;
-          await sleep(20);
+          await sleep(18);
         }
       }
       for (let j = 0; j < lines[i].content.length; j++) {

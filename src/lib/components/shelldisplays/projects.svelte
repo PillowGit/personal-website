@@ -19,7 +19,7 @@
     while (i < input_text.length) {
       input_field = input_text.slice(0, i+1) + "▮";
       i++;
-      await sleep(Math.random() * 90 + 50);
+      await sleep(Math.random() * 90 + 25);
     }
     await sleep(500);
     imitate_load = true;
