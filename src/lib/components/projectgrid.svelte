@@ -71,6 +71,8 @@
         transition: 0.2s;
         border-radius: 1rem;
         border: 0.5px solid color-mix(in srgb, var(--main-color) 50%, transparent);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
     }
     .project-card img {
         height: 100%;
