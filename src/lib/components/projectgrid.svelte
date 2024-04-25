@@ -111,4 +111,8 @@
         opacity: 1;
         visibility: visible;
     }
+        /* Image is also blurred on hover */
+    .project-card:hover img {
+        filter: blur(5px);
+    }
 </style>
