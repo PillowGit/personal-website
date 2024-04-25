@@ -85,9 +85,13 @@
         opacity: 0;
         visibility: hidden;
         transition: 0.4s;
+        -webkit-filter: blur(2px);
+        filter: blur(5px);
         transform: translateY(-2rem);
     }
     .content-focus-container.active {
+        -webkit-filter: none;
+        filter: none;
         opacity: 1;
         visibility: visible;
         transform: none;
