@@ -59,7 +59,8 @@
         background: rgba(255, 255, 255, 0.2);
         animation: animate 25s linear infinite;
         bottom: -150px;
-
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
     }
     .circles li:nth-child(1){
         left: 25%;
