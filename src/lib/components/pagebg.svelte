@@ -14,8 +14,6 @@
     });
 </script>
 
-<!-- Inspo: https://codepen.io/mohaiman/pen/MQqMyo -->
-
 <div class="area" >
   <ul class="circles">
     <li></li>
