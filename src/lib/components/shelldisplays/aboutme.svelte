@@ -89,7 +89,7 @@
       type: "colored",
       icon: null,
       colored: "Age/DOB:",
-      content: "April 21, 2003  -  21 years old"
+      content: `April 21, 2003  -  ${new Date().getFullYear() - 2003} years old`
     },
     {
       type: "colored",
