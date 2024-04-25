@@ -90,25 +90,22 @@
       type: "colored",
       icon: null,
       colored: "Age/DOB:",
-      content: "April 21, 2003  |  21 yo"
+      content: "April 21, 2003  -  21 years old"
     },
     {
       type: "colored",
       icon: null,
       colored: "Skills:",
-      content: "C++, C, JS, HTML, CSS, Python, Rust, Go"
+      content: "C++, C, Lua, TS, JS, HTML, CSS, Python, Rust, Go"
     },
     {
       type: "colored",
       icon: null,
-      colored: "Title:",
-      content: "Google SWE Intern"
+      colored: "Titles:",
+      content: "3rd Year CS Student @ CSUF, Google SWE Intern, ACM CSUF Algo Board Member, Fullyhacks Organizer"
     },
   ];
   let shown_lines: Line[] = [];
-  // debug
-  //shown_lines = lines;
-  // debug
   async function displayLines() {
     for (let i = 0; i < lines.length; i++) {
       // Add entry to shown_lines
@@ -120,9 +117,10 @@
       });
       shown_lines = shown_lines;
       // If entry has type colored, simulate typing the colored section too
-      if (lines[i].type === "colored" && lines[i].colored !== null) {
-        for (let j = 0; j < lines[i].colored.length; j++) {
-          shown_lines[i].colored += lines[i].colored[j];
+      if (lines[i].colored !== null && lines[i].type === "colored") {
+        const colored_text: string = lines[i].colored || "";
+        for (let j = 0; j < colored_text.length; j++) {
+          shown_lines[i].colored += colored_text[j];
           shown_lines = shown_lines;
           await sleep(20);
         }

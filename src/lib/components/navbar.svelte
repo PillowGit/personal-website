@@ -49,6 +49,22 @@
                 href: null,
                 target: null,
                 func: () => { alert("\nquack"); },
+            },
+            2: {
+                name: "Cat",
+                img_url: "/icons/cat.svg",
+                alt: "Cat",
+                href: null,
+                target: null,
+                func: () => { alert("\nmeow"); },
+            },
+            3: {
+                name: "100",
+                img_url: "/icons/one-hundred.svg",
+                alt: "100",
+                href: null,
+                target: null,
+                func: () => { alert("\n💯"); },
             }
         }, 
         main: {
