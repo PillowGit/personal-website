@@ -74,14 +74,6 @@
         },
         right: {
             0: {
-                name: "Mark",
-                img_url: "/icons/hearteyes.svg",
-                alt: "Mark",
-                href: "https://markg.dev",
-                target: "_blank",
-                func: null,
-            },
-            1: {
                 name: "Code",
                 img_url: "/icons/code.svg",
                 alt: "Code Repo",
